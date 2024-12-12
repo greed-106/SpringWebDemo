@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨明佳的个人信息</title>
+    <!-- 引入 ElementUI 样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- 引入 Vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!-- 引入 ElementUI -->
+    <script src="https://unpkg.com/element-plus"></script>
+</head>
+<body>
+<div id="app">
+    <el-container>
+        <el-header>
+            <h1 style="color: white; text-align: center;">杨明佳的个人信息</h1>
+        </el-header>
+        <el-main>
+            <el-card>
+                <h2>个人简介</h2>
+                <el-divider></el-divider>
+                <el-descriptions border column="1" title="基本信息">
+                    <el-descriptions-item label="姓名">杨明佳</el-descriptions-item>
+                    <el-descriptions-item label="学校">北京邮电大学</el-descriptions-item>
+                    <el-descriptions-item label="学院">计算机学院</el-descriptions-item>
+                    <el-descriptions-item label="专业">网络工程</el-descriptions-item>
+                    <el-descriptions-item label="年级">2022级本科生</el-descriptions-item>
+                    <el-descriptions-item label="擅长">后端开发</el-descriptions-item>
+                </el-descriptions>
+            </el-card>
+        </el-main>
+        <el-footer style="text-align: center;">
+            © 2024 杨明佳 - 北京邮电大学
+        </el-footer>
+    </el-container>
+</div>
+
+<script>
+    const app = Vue.createApp({});
+    app.use(ElementPlus);
+    app.mount('#app');
+</script>
+</body>
+</html>

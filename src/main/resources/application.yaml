@@ -1,0 +1,35 @@
+server:
+  port: 8080  # 指定 Spring Boot 应用程序启动时的服务器端口号
+
+mybatis:
+#  mapper-locations: classpath:mappers/*xml  # 指定 MyBatis 的 Mapper XML 文件所在路径
+#  type-aliases-package: com.ymj.addresslist.mybatis.entity  # 指定 MyBatis 的类型别名所在的包路径
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+spring:
+  #database
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/address_list
+    username: ymj
+    password: Ymj20040312@
+    hikari:
+      max-lifetime: 35000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 30000
+  #QQ Mail
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: 1062415694@qq.com
+    password: mxteibwfeatebejf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
