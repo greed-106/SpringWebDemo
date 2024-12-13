@@ -13,7 +13,7 @@ import java.util.List;
 @Mapper
 public interface ContactsMapper {
 
-    @Insert("INSERT INTO contacts (username, name, phone_number, email) VALUES (#{username}, #{name}, #{phoneNumber}, #{email})")
+    @Insert("INSERT INTO contacts (username, name, phone_number, email, avatar) VALUES (#{username}, #{name}, #{phoneNumber}, #{email}, #{avatar})")
     void insertContact(InsertContactRequest insertContactRequest);
 
     void updateContact(UpdateContactRequest updateContactRequest);
