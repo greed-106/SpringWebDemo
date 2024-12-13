@@ -2,6 +2,7 @@ package com.ymj.webdemo.controller;
 
 
 import com.ymj.webdemo.pojo.DTO.LoginRequest;
+import com.ymj.webdemo.pojo.DTO.RegisterRequest;
 import com.ymj.webdemo.pojo.Result;
 import com.ymj.webdemo.service.UsersService;
 import lombok.extern.slf4j.Slf4j;
@@ -24,9 +25,9 @@ public class LoginController {
     }
 
     @PostMapping("/address/register")
-    public Result register(@RequestBody LoginRequest loginReq) {
-        usersService.verifyRegister(loginReq.getUser());
-        usersService.insertUser(loginReq.getUser());
+    public Result register(@RequestBody RegisterRequest registerRequest) {
+        usersService.verifyRegister(registerRequest.getUser());
+        usersService.insertUser(registerRequest.getUser());
         return Result.success();
     }
 }
