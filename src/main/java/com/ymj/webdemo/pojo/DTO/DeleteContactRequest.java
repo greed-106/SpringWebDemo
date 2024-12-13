@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeleteContactRequest {
     private String username;
-    private String name;
+    private Integer contactId;
 }

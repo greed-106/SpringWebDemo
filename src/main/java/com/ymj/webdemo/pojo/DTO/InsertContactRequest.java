@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddContactRequest {
+public class InsertContactRequest {
     private String username;
     private String name;
     private String phoneNumber;
     private String email;
-    private String address;
+    private String avatar;
 }

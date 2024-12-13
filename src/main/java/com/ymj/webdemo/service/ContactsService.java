@@ -1,18 +1,25 @@
 package com.ymj.webdemo.service;
 
-import com.ymj.webdemo.pojo.DTO.AddContactRequest;
+import com.ymj.webdemo.pojo.Contact;
+import com.ymj.webdemo.pojo.DTO.InsertContactRequest;
 import com.ymj.webdemo.pojo.DTO.DeleteContactRequest;
 import com.ymj.webdemo.pojo.DTO.GetContactRequest;
 import com.ymj.webdemo.pojo.DTO.UpdateContactRequest;
 
+import java.util.List;
+
 public interface ContactsService {
-    void addContact(AddContactRequest addContactRequest);
+    void insertContact(InsertContactRequest insertContactRequest);
 
     void updateContact(UpdateContactRequest updateContactRequest);
 
     void deleteContact(DeleteContactRequest deleteContactRequest);
 
-    void getContact(GetContactRequest getContactRequest);
+    Contact selectContact(GetContactRequest getContactRequest);
 
-    void getAllContacts(String username);
+    List<Contact> selectAllContacts(String username);
+
+    boolean isContactIdExist(int contactId);
+
+    void verifyContactId(int contactId);
 }

@@ -1,5 +1,6 @@
 package com.ymj.webdemo.pojo.DTO;
 
+import com.ymj.webdemo.pojo.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,11 +8,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UpdateContactRequest {
-    private Integer contactId;
+public class UpdateUserRequest {
     private String username;
-    private String name;
-    private String phoneNumber;
-    private String email;
-    private String avatar;
+    private String password;
+
+    public User getUser() {
+        return new User(username, password);
+    }
 }

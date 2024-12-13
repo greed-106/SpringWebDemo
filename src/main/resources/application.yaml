@@ -2,8 +2,8 @@ server:
   port: 8080  # 指定 Spring Boot 应用程序启动时的服务器端口号
 
 mybatis:
-#  mapper-locations: classpath:mappers/*xml  # 指定 MyBatis 的 Mapper XML 文件所在路径
-#  type-aliases-package: com.ymj.addresslist.mybatis.entity  # 指定 MyBatis 的类型别名所在的包路径
+  mapper-locations: classpath:mappers/*xml  # 指定 MyBatis 的 Mapper XML 文件所在路径
+  type-aliases-package: com.ymj.addresslist.mybatis.entity  # 指定 MyBatis 的类型别名所在的包路径
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
